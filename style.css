@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2b1b1;
+}
+
+.container{
+    position: absolute;
+}
+
+.cloCK{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cloCK span{
+    inset: 12px;
+    text-align: center;
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i))); 
+}
+
+.cloCK span b{
+    font-size: 20px;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+.cloCK::before{
+    z-index: 2;
+    width: 8px;
+    height: 8px;
+    content: '';
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+
+.pin{
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    justify-content: center;
+}
+.pin i{
+    width: 4px;
+    height: var(--h);
+    position: absolute;
+    border-radius: 10px;
+    background-color: var(--clr);
+}
